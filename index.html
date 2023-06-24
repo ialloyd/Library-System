@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library System</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Arial">
+    <style>
+        body {
+            font-family: "Arial", sans-serif;
+        }
+        </style>
+</head>
+<body>
+    <div class="navbar">
+        <div class="logo">
+            <a href="#">Library System</a>
+        </div>
+        <div class="menu">
+            <ul>
+                <li><a href="#books">Books</a></li>
+                <li><a href="#register">Register</a></li>
+                <li><a href="#">Contact Us</a></li>
+                <li><a href="#">Logout</a></li>
+            </ul>          
+        </div>   
+    </div>
+    <div class="books" id="books">
+
+        <h2>Books</h2>
+
+        <div class="grid-container">
+            <div class="grid-item"><h4>Book ID</h4></div>
+            <div class="grid-item"><h4>Title</h4></div>
+            <div class="grid-item"><h4>Author</h4></div>  
+            <div class="grid-item"><h4>Genre</h4></div>
+            <div class="grid-item"><h4>Availability</h4></div>
+            <div class="grid-item">1</div>  
+            <div class="grid-item">
+                <a href="#">The Great Gatsby</a>
+                <div class="grid-container-2">
+                    <div class="grid-item-2">Publication Date:1925</div>
+                    <div class="grid-item-2">Page Count:250</div>
+                    <div class="grid-item-2">ISBN:123-4567890123</div>
+                </div>
+            </div>
+            <div class="grid-item">	F. Scott Fitzgerald</div>
+            <div class="grid-item">	Tragedy</div>
+            <div class="grid-item">Available</div>
+            <div class="grid-item">2</div>  
+            <div class="grid-item">
+                <a href="#">To Kill a Mockingbird</a>
+                <div class="grid-container-2">
+                    <div class="grid-item-2">Publication Date:1960</div>
+                    <div class="grid-item-2">Page Count:250</div>
+                    <div class="grid-item-2">ISBN:123-4567890123</div>
+                </div>
+            </div>
+            <div class="grid-item">	Harper Lee</div>
+            <div class="grid-item">Southern Gothic</div>
+            <div class="grid-item">Available</div>
+            <div class="grid-item">3</div>  
+            <div class="grid-item">
+                <a href="#">Catch-22</a>
+                <div class="grid-container-2">
+                    <div class="grid-item-2">Publication Date:1961</div>
+                    <div class="grid-item-2">Page Count:250</div>
+                    <div class="grid-item-2">ISBN:123-4567890123</div>
+                </div>
+            </div>
+            <div class="grid-item">Joseph Heller</div>
+            <div class="grid-item">Dark comedy</div>
+            <div class="grid-item">Available</div>
+            <div class="grid-item">4</div>  
+            <div class="grid-item">
+                <a href="#">Ulysses</a>
+                <div class="grid-container-2">
+                    <div class="grid-item-2">Publication Date:1922</div>
+                    <div class="grid-item-2">Page Count:250</div>
+                    <div class="grid-item-2">ISBN:123-4567890123</div>
+                </div>
+            </div>
+            <div class="grid-item">James Joyce</div>
+            <div class="grid-item">Modernist</div>
+            <div class="grid-item">Available</div>
+            <div class="grid-item">5</div>  
+            <div class="grid-item">
+                <a href="#">Jane Eyre</a>
+                <div class="grid-container-2">
+                    <div class="grid-item-2">Publication Date:1847</div>
+                    <div class="grid-item-2">Page Count:250</div>
+                    <div class="grid-item-2">ISBN:123-4567890123</div>
+                </div>
+            </div>
+            <div class="grid-item">Charlotte Brontë</div>
+            <div class="grid-item">Bildungsroman</div>
+            <div class="grid-item">Available</div>  
+        </div>
+    </div>
+
+    <div class="register" id="register">
+        <h2 class="heading">Register</h2>
+        <form>
+            <label for="firstname">First Name:</label>
+            <input type="text" id="firstname" name="firstname" required>
+            <label for="lastname">Last Name:</label>
+            <input type="text" id="lastname" name="lastname" required>
+            <label for="dateofbirth">Date Of Birth:</label>
+            <input type="date" id="dateofbirth" name="dateofbirth" required>
+            <label for="age">Age:</label>
+            <input type="number" id="age" name="age" min="5" max="100" required>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+            <label for="confirm-password">Confirm Password:</label>
+            <input type="password" id="confirm-password" name="confirm-password" required>
+            <button type="submit" onclick="matchPassword()">Register</button>
+        </form>
+    </div>
+
+    <script>
+        function matchPassword() {  
+            var pw1 = document.getElementById("password").value;
+            var pw2 = document.getElementById("confirm-password").value;  
+            if(pw1!=pw2) {  
+                
+                alert("Passwords did not match!");  
+            }
+        }  
+    </script>
+    
+</body>
+</html>
